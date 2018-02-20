@@ -1,0 +1,15 @@
+.header-container {
+  width: 100%;
+  /* padding: 20px; */
+}
+.header {
+  background: rgb(229, 77, 66);
+  height: 150px;
+ padding: 10px;
+}
+
+.budget {
+  text-align: right;
+  font-weight: 100;
+  margin: 0;
+}

@@ -1,0 +1,8 @@
+.delete-btn {
+  width: 100%;
+text-align: center;
+}
+
+.delete-btn:hover {
+  cursor:pointer;
+}

@@ -1,0 +1,9 @@
+<div class="movie-container">
+  <div *ngIf='myMovies.length < 1 || lowBudget' class="select-msg ">{{ message }}</div>
+
+  <div class="list-container row">
+      <div *ngFor="let movie of myMovies | filter:searchText:'title' | filter:year:'year'" class="col-lg-4 box">
+        <app-movie [isMyMovies]='editMode' [movie]='movie'></app-movie>
+      </div>
+    </div>
+</div>

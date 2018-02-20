@@ -1,0 +1,6 @@
+<div class="list-container row">
+
+  <div *ngFor="let movie of movies | filter:searchText:'title'" class="col-lg-4 box">
+    <app-movie [isMyMovies]='false' [movie]='movie'></app-movie>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div (click)='movieChosen()'>
+    <div class="inner">
+  <div class="row">
+    <div class="col-lg-12">
+      <img class="movie-img" src='{{currentMovie.img}}' alt="">
+      <a *ngIf='isMyMovies' href="#" (click)='removeMovie(this.movie)'>remove</a>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-12 title">
+      <h2 class="inline">{{currentMovie.title}}</h2>
+      <p class="inline">, {{currentMovie.year}}</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-12">
+      <p>{{currentMovie.descrShort}}</p>
+    </div>
+  </div>
+</div>
+</div>

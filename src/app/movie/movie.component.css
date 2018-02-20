@@ -1,0 +1,27 @@
+.movie-img {
+  width: 100%;
+  height: 200px;
+}
+
+.inline {
+  display: inline;
+}
+
+.title {
+  margin-top: 35px;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 14px;
+}
+
+*:hover {
+  cursor:pointer;
+
+}
+
+.inner {
+  padding: 6px;
+  background: white;
+}

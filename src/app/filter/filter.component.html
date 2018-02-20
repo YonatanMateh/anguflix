@@ -1,0 +1,18 @@
+<form>
+  <div class="form-row">
+    <div class="col-lg-3">
+      <input type="text" class="form-control" placeholder="Search by title" [(ngModel)]='filterText' name='filterText' (ngModelChange)='filterByTitle()'>
+    </div>
+    <div *ngIf="showFilter" class="col-lg-3" >
+      <select class="form-control" name="year" [(ngModel)]="year" (ngModelChange)="filterByYear()">
+        <option value="" selected>Any year</option>
+        <option *ngFor="let number of years">{{ number }}</option>
+      </select>
+    </div>
+
+    <div *ngIf="showFilter" class="col-lg-1">
+      <i [ngClass] = "!isEditMode ? 'fa-trash' : 'fa-check'" class="fa delete-btn" (click)='deleteBtnClicked()'></i>
+    </div>
+
+  </div>
+</form>

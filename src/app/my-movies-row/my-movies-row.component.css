@@ -1,0 +1,15 @@
+.movie-container {
+    border-bottom: solid white 1px;
+    padding: 0 10px;
+}
+
+.select-msg {
+    text-align: center;
+    color: white;
+    height: 200px;
+    width: 100%;
+    font-size: 30px;
+    vertical-align: middle;
+    line-height: 200px;
+    /* the same as the div height*/
+}
