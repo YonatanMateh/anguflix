@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { MovieService } from '../movie.service';
 import { Movie } from '../movie';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-my-movies-row',
@@ -11,10 +12,10 @@ export class MyMoviesRowComponent implements OnInit {
   myMovies: Movie[];
   moviesToPresent: any[];
   editMode: boolean;
-  constructor(private movieService: MovieService) { }
+  constructor(private movieService: MovieService, private userService: UserService) { }
 
   ngOnInit() {
-    this.myMovies = this.movieService.getMyMovies();
+    this.myMovies = this.userService.getMyMovies();
     this.editMode = this.movieService.getEditMode()
       .subscribe((mode) => {
         this.setEditMode(mode);
@@ -26,11 +27,11 @@ export class MyMoviesRowComponent implements OnInit {
   }
 
   get message() {
-    return this.movieService.message;
+    return this.userService.message;
   }
 
   get lowBudget() {
-    return this.movieService.lowBudget;
+    return this.userService.lowBudget;
   }
 
   get searchText() {

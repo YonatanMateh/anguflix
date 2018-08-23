@@ -1,9 +1,9 @@
 export class Movie {
-  id: number;
-  img: string;
+  _id: number;
+  imgUrl: string;
   title: string;
   price: number;
   year: number;
-  descrShort: string;
+  shortDescription: string;
   editMode: boolean;
 }

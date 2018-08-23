@@ -25,3 +25,8 @@ p {
   padding: 6px;
   background: white;
 }
+
+a {
+  text-decoration: none;
+  color: black;
+}

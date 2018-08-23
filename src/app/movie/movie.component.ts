@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Movie } from '../movie';
 import { MovieService } from '../movie.service';
-
+import { UserService } from '../user.service';
 @Component({
   selector: 'app-movie',
   templateUrl: './movie.component.html',
@@ -12,7 +12,7 @@ export class MovieComponent implements OnInit {
   currentMovie: Movie;
   @Input() isMyMovies: boolean;
 
-  constructor(private movieService: MovieService) { }
+  constructor(private movieService: MovieService, private userService: UserService) { }
 
   ngOnInit() {
     this.currentMovie = this.movie;
@@ -20,11 +20,11 @@ export class MovieComponent implements OnInit {
 
   movieChosen(i) {
     if(!this.isMyMovies) {
-    this.movieService.videoChosen(this.currentMovie);
+    this.userService.videoChosen(this.currentMovie);
     }
   }
 
   removeMovie(movie: Movie) {
-    this.movieService.removeMovieFromMyMovies(movie);
+    this.userService.removeMovieFromMyMovies(movie);
   }
 }

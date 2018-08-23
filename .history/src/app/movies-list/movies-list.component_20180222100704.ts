@@ -15,8 +15,7 @@ movies: Movie[];
   ngOnInit() {
   this.movieService.getMovies()
     .subscribe(
-      data => {
-        this.movies = data
+      data => {this.movies = data
       console.log(this.movies);
     },
       error => {

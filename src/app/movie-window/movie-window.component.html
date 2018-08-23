@@ -1,0 +1,13 @@
+<div *ngIf='movie'>
+  <img src="{{movie.imgUrl}}" alt="">
+  <h2>{{movie.title}}</h2>
+  <p>{{movie.director}}, {{movie.year}}</p>
+  <p>{{movie.fullDescription}}</p>
+  <ul *ngIf='movie.reviews'>
+    <li *ngFor='let review of movie.reviews'>
+      <h4>{{review.name}}, {{review.rating}}</h4>
+      <p>{{review.text}}</p>
+    </li>
+  </ul>
+  <button (click)='addMovie()'>Add Movie</button>
+</div>
